@@ -1,0 +1,25 @@
+{
+  "run_name": "quick",
+  "N": 400,
+  "L": 60,
+  "sigma2": 1.0,
+  "template_type": "rect",
+  "template_amplitude": 1.0,
+  "tau_mode": "uniform",
+  "tau_fixed": 100,
+  "M_cal": 5000,
+  "M_eval": 5000,
+  "alpha_grid": [
+    0.1,
+    0.05,
+    0.01
+  ],
+  "amplitudes": [
+    0.0,
+    0.5,
+    1.0,
+    1.5,
+    2.0
+  ],
+  "seed": 12345
+}

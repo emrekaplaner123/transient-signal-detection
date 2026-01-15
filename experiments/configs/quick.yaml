@@ -1,0 +1,30 @@
+run_name: "quick"
+
+# Signal / observation setup
+N: 400              # total number of samples in y
+L: 60               # length of transient template
+sigma2: 1.0         # known noise variance
+
+# Template definition: rectangular pulse
+template:
+  type: "rect"
+  amplitude: 1.0    # values in s are all amplitude (e.g. 1.0)
+
+# Arrival-time model for H1 simulations
+tau_mode: "uniform" # "uniform" or "fixed"
+tau_fixed: 100      # only used if tau_mode == "fixed"
+
+# Monte Carlo sizes
+M_cal: 5000         # MC trials for threshold calibration under H0
+M_eval: 5000        # MC trials for PF/PD estimates
+
+# False alarm probabilities to calibrate
+alpha_grid: [0.1, 0.05, 0.01]
+
+# Amplitudes to test under H1
+amplitudes: [0.0, 0.5, 1.0, 1.5, 2.0]
+
+# Randomness
+seed: 12345
+
+alpha_target: 0.05
