@@ -47,9 +47,5 @@ def glrt_scan_statistic(y: np.ndarray, bank: TemplateBank) -> DetectionResult:
 
 
 def decide(T: float, gamma: float) -> bool:
-    """
-    Decision rule:
-        decide H1 iff T > gamma
-    Returns True if H1, False if H0.
-    """
+
     return bool(T > gamma)

@@ -42,10 +42,7 @@ def estimate_pf(p: Params, bank: TemplateBank, gamma: float, *, seed_offset: int
 
 
 def estimate_pd(p: Params, bank: TemplateBank, gamma: float, A: float, *, seed_offset: int = 0) -> RateEstimate:
-    """
-    Estimate detection probability PD = P(T > gamma | H1).
-    H1: y = A*s_tau + v, where tau is either fixed or uniform.
-    """
+
     rng = np.random.default_rng(p.seed + 20_000 + seed_offset)
     M = int(p.M_eval)
     sigma = float(np.sqrt(p.sigma2))

@@ -96,12 +96,7 @@ def _validate_core(
 
 
 def load_config(config_path: str | Path) -> Params:
-    """
-    Load YAML config and return a fully-initialized Params object with derived fields:
-    - T_max = N - L
-    - taus = [0, 1, ..., T_max]
-    - s = rectangular pulse of length L
-    """
+
     config_path = Path(config_path)
 
     with config_path.open("r", encoding="utf-8") as f:

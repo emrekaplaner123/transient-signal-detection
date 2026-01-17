@@ -15,12 +15,7 @@ class CalibrationResult:
 
 
 def calibrate_thresholds_mc(p: Params, bank: TemplateBank) -> CalibrationResult:
-    """
-    Monte Carlo calibration under H0:
-      - simulate y ~ N(0, sigma2 I)
-      - compute T(y)
-      - set gamma(alpha) = empirical (1-alpha)-quantile of T(y)
-    """
+
     rng = np.random.default_rng(p.seed)
 
     M = int(p.M_cal)

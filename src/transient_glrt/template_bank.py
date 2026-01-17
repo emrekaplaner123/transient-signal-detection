@@ -16,10 +16,7 @@ class TemplateBank:
 
 
 def embed_shift(s: np.ndarray, N: int, tau: int) -> np.ndarray:
-    """
-    Create s_tau in R^N by zero-padding and shifting:
-    s_tau[tau : tau+L] = s, and 0 elsewhere.
-    """
+
     L = int(s.shape[0])
     if not (0 <= tau <= N - L):
         raise ValueError(f"tau must be in [0, {N-L}]. Got tau={tau}.")
@@ -29,10 +26,7 @@ def embed_shift(s: np.ndarray, N: int, tau: int) -> np.ndarray:
 
 
 def build_template_bank(p: Params) -> TemplateBank:
-    """
-    Build all shifted templates s_tau for tau in p.taus (0..N-L).
-    Returns a TemplateBank with cached norms.
-    """
+
     N, L = p.N, p.L
     taus = p.taus
     K = int(taus.shape[0])
