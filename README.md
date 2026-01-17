@@ -5,6 +5,11 @@ Thresholds gamma(alpha) are calibrated by **Monte Carlo under H0**, and performa
 
 ---
 
+## Paper
+- [PDF](paper/transient-signal-detection.pdf)
+
+---
+
 ## Repository layout
 
 - `src/transient_glrt/` — implementation (detector + calibration + evaluation)
